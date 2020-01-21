@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>IMBECIL</title>
+  <style>
+    body {
+      background: black;
+      color: blanchedalmond;
+      font: normal 20pt Negrito;
+
+    }
+
+    input {
+      color: black;
+      font: normal 20pt Negrito;
+    }
+
+    div#res {
+      color: white;
+      font: normal 20pt Negrito;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Ratazaninha minha!</h1>
+  Você rouba comida dos outros:<input type="text" name="txtrat" id="txtrat">
+  <input type="button" value="verificar" onclick="verificar()">
+  <div id="res">
+
+    <div>
+      <script>
+        function verificar() {
+          var rt = window.document.querySelector('input#txrat')
+          var res = window.document.querySelector('div#res')
+          var Ratazaninha = (txrat.value)
+          res.innerHTML = `<p> Você é <strong>${Ratazaninha}</strong>.</p>`
+          if (Ratazaninha == 'Ratazaninha') {
+            res.innerHTML = `<p>Você está <strong>MENTINDO</strong>, e come demais, seu obeso que amo!.</p>`
+          }
+          else { res.innerHTML = `<p>Você é uma <strong>Ratazaninha!</strong> obesa que amo!</p>` }
+
+        }
+
+
+
+      </script>
+
+    </div>
+</body>
+
+</html>

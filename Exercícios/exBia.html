@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PAÍS</title>
+</head>
+
+<body>
+  <h1>Sistema de Passaporte</h1>
+  Países: <input type="text" name="txtpaís" id="txtpaís">
+  <input type="button" value="Verificar" onclick="verificar()">
+  <div id="res">
+
+  </div>
+
+  <script>
+    function verificar() {
+      var txtp = window.document.querySelector('input#txtpaís')
+      var res = window.document.querySelector('div#res')
+      var país = (txtp.value)
+      res.innerHTML = `<p> Vivendo em <strong>${país}</strong></p>`
+      if (país == 'Brasil') {
+        res.innerHTML += `<p>Você é <strong>BRASILEIRO</strong>.</p>`
+      } else {
+        res.innerHTML += `<p>Você é <strong>ESTRANGEIRO</strong>.</p>`
+      }
+    }
+
+  </script>
+</body>
+
+</html>
